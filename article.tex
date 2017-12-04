@@ -1,0 +1,201 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[twoside,twocolumn]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Agile Methods and Model Driven Engineering: a survey} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%--------------------------------------------------
+% LIBRARY SECTION
+
+
+
+
+%--------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Agile Methods and Model Driven Engineering: a survey}% Article title
+\author{%
+\textsc{Faustin Ahishakiye} \\[1ex] % Your name
+\normalsize Western Norway University of Applied Sciences \\ % Your institution
+\normalsize \href{mailto:fahi@hvl.no}{fahi@hvl.no} % Your email address
+\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+\textsc{Angela Barriga Rodriguez} \\[1ex] % Second author's name
+\normalsize Western Norway University of Applied Sciences \\ % Second author's institution
+\normalsize \href{mailto:abar@hvl.no}{abar@hvl.no} % Second author's email address
+\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+\textsc{Frikk Hosøy Fossdal} \\[1ex] % Second author's name
+\normalsize Western Norway University of Applied Sciences \\ % Second author's institution
+\normalsize \href{mailto:ffo@hvl.no}{ffo@hvl.no} % Second author's email address
+\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+\textsc{Job Nyangena} \\[1ex] % Second author's name
+\normalsize University of Bergen \\ % Second author's institution
+\normalsize \href{mailto:jbngena@gmail.com}{jbngena@gmail.com} % Second author's email address
+\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+\textsc{Patrick Stünkel} \\[1ex] % Second author's name
+\normalsize Western Norway University of Applied Sciences \\ % Second author's institution
+\normalsize \href{mailto:past@hvl.no}{past@hvl.no} % Second author's email address
+\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+\textsc{Alejandro Rodriguez Tena} \\[1ex] % Second author's name
+\normalsize Western Norway University of Applied Sciences \\ % Second author's institution
+\normalsize \href{mailto:arte@hvl.no}{arte@hvl.no} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent TODO ARTE write abstract % abstract text
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+% Really nice looking first letter
+%\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
+
+TODO FAHI write the intro
+
+\section{Method}
+
+TODO PAST write the method
+
+\section{Survey}
+
+\subsection{Agile Model Driven Development}
+
+Modeling is an important part of all software development projects because it enables to think through complex issues before the attempt to address them via code. This is true for agile projects, for not-so-agile projects, for embedded projects, and for business application projects. Unfortunately, many modeling efforts prove to be dysfunctional. At one end of the spectrum there are projects where no modeling is performed, either because the developers haven’t any modeling skills or because they have abandoned modeling as a useless endeavor. At the other end of the spectrum there are projects which sink in a morass of documentation and overly detailed models, either because the project team suffers from “analysis paralysis” and finds itself unable to move forward or because the team has burdened itself with too many modeling specialists who don’t have the skills to move forward even if they wanted to. Somewhere in the middle, there are project teams that invest in modeling and documentation efforts only to discover that the programmers ignore the models anyway, often because the models are unrealistic or simply because the programmers think they know better than the modelers (and often they do). The goal of Agile Model Driven Development (AMDD) is to show how to avoid these problems, to gain the benefits of modeling and documentation without suffering the drawbacks \cite{1}.
+
+AMDD as the agile version of MDD (Model Driven Development) takes a much more realistic approach: its goal is to describe how developers and stakeholders can work together cooperatively to create models which are just barely good enough. It assumes that each individual has some modeling skills, or at least some domain knowledge, that they will apply together in a team in order to get the job done. It is reasonable to assume that developers will understand a handful of the modeling techniques out there, but not all of them. It is also reasonable to assume that people are willing to learn new techniques over time, often by working with someone else that already has those skills.
+
+AMDD does not require everyone to be a modeling expert, it just requires them to be willing to try. AMDD also allows people to use the most appropriate modeling tool for the job, often very simple tools such as whiteboards or paper, because one wants to find ways to communicate effectively, not document comprehensively. There is nothing wrong with sophisticated CASE tools in the hands of people who know how to use them, but AMDD does not depend on such tools.
+
+\subsection{Agile Model Driven Development Is Good Enough}
+
+S. W. Ambler \cite{2} believes that modeling is a way to think issues through before the code step because it lets to think at a higher abstraction level. One can also do this by writing a test before writing functional code, along the lines of test-driven development.
+With the Agile Model Driven Development (AMDD) approach, one typically do just enough high-level modeling at the beginning of a project to understand the scope and potential architecture of the system, and then during development iterations modelling will be done as part of the iteration planning activities to. In this way light models will be done in several minutes as precursor to several hours of coding.
+
+An agile model is just barely good enough—it meets its goals and no more. Several times experts tend to use complex models, even when the situation can be described in a softer and simpler way. The vast majority of models can be drawn on a whiteboard, on paper or even the back of a napkin. Whenever one of these diagrams want to be saved it can be taken a picture of it with a digital camera, or even simply transcribe it onto paper. This works because most diagrams are throwaways; their true value comes from drawing them to think through an issue, and once the issue is resolved the diagram doesn't offer much value.
+
+In the end of \cite{2} there is a discussion between Axel Uhl and Scott W Ambler, Axel remarks some projects where MDA succeeded nevertheless Scott answers saying that he is not very excited about MDA due to big failures of some projects in the past.
+
+\subsection{Agile Model Driven Development: An Intelligent Compromise}
+
+This article \cite{3} presents the concept of Agile Model Driven Development or AMDD as an attempt to effectively bring together the fast pace of agile development and the guaranteed quality of model-driven development. This methodology makes use of the strong contrast between Agility and Model Driven Software Engineering or MDSE, attempting to cover each of their flaws with the strong points of the other, creating a symbiotic association. For instance, MDSE strict focus on documentation and models generation can supply perfectly the documentation “phobia” that suffers agile development.
+
+The author reviews four different types of AMDD processes used in academia and industry:
+\begin{itemize}
+\item Sage (2006): uses a MDD-Based approach, with the main objective of applying agility to high assurance software. Its main contribution has been the support of executable delivery from partial conflicting models.
+\item Hybrid MDD (2009): Assembly-Based, focus on applying MDD to small and middle size projects. It contributed with the support of the partial usage of MDD activities in collaboration with traditional programming practices.
+\item MDD-SLAP (2011): Agile-Based, focused on benefiting from both agile and MDD advantages in developing real-time telecommunication systems. Its main contribution is establishing a simple, yet fundamental correspondence between MDD activities and agile practices.
+\item High-Level Lifecycle (2004): Again agile-Based, its main aim being scaling agile development and focusing on putting forward the notion of AMDD approach.
+\end{itemize}
+
+After reviewing and analyzing each of them according to AMDD, MDD and Agility evaluation criteria; the author concludes that AMDD adopts different processes with no convergence between them, which can be a consequence of the lack of academic research in the area.
+
+The final statement is that although AMDD is a promising field in a research and practical context, the author considers it not mature at all, stressing that it is still in its “infancy”. This paper can be used as an starting point in a AMDD research for creating, adapting or selecting AMDD processes.
+
+\subsection{Agile Modeling Method Engineering}
+
+This paper \cite{4} provides an overview on the practice of Agile Modeling Method Engineering or AMME. This practice mixes the use of modeling and agile methodologies, as a way to evolve modeling requirements all along the software life cycle and to connect more stakeholders and developers.
+
+In other words, its goal is to outline the key characteristics of AMME as an emerging paradigm for tackling evolving modeling requirements emerging from a narrow domain and for specific
+needs of modeling stakeholders.
+
+The author stresses that this kind of methodology can be especially useful in an Enterprise Model paradigm in order to tackle complexity, changing requirements, modeling as knowledge representation and the generation of “conceptual model”-awareness at run-time.
+
+In order to properly introduce this methodology, a framework and an architecture based on its principles are showed. The framework focuses on adaptability, extensibility, operability, integrability and usability along different framework modules such as tracking system, reusable asset repositories, prototyping environment and development channels. More details on the framework’s functionalities can be found in the next figure.
+
+Finally this framework is instantiated within the Open Model Initiative Laboratory to support meta-modeling research projects and to test how would the AMME approach work under a real environment. 
+
+As a conclusion, the author states the importance of accepting the AMME approach, because the Software Development field needs it as much as it did the Agile Manifiesto back in the day. Modeling
+requirements should be the essential driver for modeling method engineering, and an approach based on AMME will enable agile response to evolving requirements, as well as traceability of change propagation across modeling method building blocks.
+
+\section{Conclusion}
+
+TODO ARTE write a conclusion
+
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{acm}
+\bibliography{lib}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
