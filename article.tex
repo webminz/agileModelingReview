@@ -19,46 +19,24 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[twoside,twocolumn]{article}
-
+\documentclass[10pt, a4paper, twocolumn]{article}
+\input{structure.tex}
 \usepackage[utf8]{inputenc}
 
 \usepackage{blindtext} % Package to generate dummy text throughout this template 
-
-\usepackage[sc]{mathpazo} % Use the Palatino font
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\linespread{1.05} % Line spacing - Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
 
 \usepackage[english]{babel} % Language hyphenation and typographical rules
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-
-\usepackage{enumitem} % Customized lists
-\setlist[itemize]{noitemsep} % Make itemize lists more compact
-
 \usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
-\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
 
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+%\usepackage{titlesec} % Allows customization of titles
+%\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+%\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+%\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+%\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
 
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{Agile Methods and Model Driven Engineering: a survey} % Custom header text
-\fancyfoot[RO,LE]{\thepage} % Custom footer text
 
-\usepackage{titling} % Customizing the title section
 
 \usepackage{hyperref} % For hyperlinks in the PDF
 
@@ -67,48 +45,25 @@
 
 
 
-
 %--------------------------------------------------
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\setlength{\droptitle}{-4\baselineskip} % Move the title up
 
-\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
-\posttitle{\end{center}} % Article title closing formatting
+
+%\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+%\posttitle{\end{center}} % Article title closing formatting
 \title{Agile Methods and Model Driven Engineering: a survey}% Article title
 \author{%
-\textsc{Faustin Ahishakiye} \\[1ex] % Your name
-\normalsize Western Norway University of Applied Sciences \\ % Your institution
-\normalsize \href{mailto:fahi@hvl.no}{fahi@hvl.no} % Your email address
-\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
-\textsc{Angela Barriga Rodriguez} \\[1ex] % Second author's name
-\normalsize Western Norway University of Applied Sciences \\ % Second author's institution
-\normalsize \href{mailto:abar@hvl.no}{abar@hvl.no} % Second author's email address
-\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
-\textsc{Frikk Hosøy Fossdal} \\[1ex] % Second author's name
-\normalsize Western Norway University of Applied Sciences \\ % Second author's institution
-\normalsize \href{mailto:ffo@hvl.no}{ffo@hvl.no} % Second author's email address
-\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
-\textsc{Job Nyangena} \\[1ex] % Second author's name
-\normalsize University of Bergen \\ % Second author's institution
-\normalsize \href{mailto:jbngena@gmail.com}{jbngena@gmail.com} % Second author's email address
-\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
-\textsc{Patrick Stünkel} \\[1ex] % Second author's name
-\normalsize Western Norway University of Applied Sciences \\ % Second author's institution
-\normalsize \href{mailto:past@hvl.no}{past@hvl.no} % Second author's email address
-\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
-\textsc{Alejandro Rodriguez Tena} \\[1ex] % Second author's name
-\normalsize Western Norway University of Applied Sciences \\ % Second author's institution
-\normalsize \href{mailto:arte@hvl.no}{arte@hvl.no} % Second author's email address
+\authorstyle{Faustin Ahishakiye\textsuperscript{1}, Angela Barriga Rodriguez\textsuperscript{1}, Frikk Hosøy Fossdal\textsuperscript{1}, Job Nyangena\textsuperscript{2}, Patrick Stünkel\textsuperscript{1} and Alejandro Rodriguez Tena\textsuperscript{1}
+}\\
+\newline\newline % Space before institutions
+\textsuperscript{1}\institution{Western Norway University of Applied Sciences}\\
+\textsuperscript{2}\institution{University of Bergen}
 }
 \date{\today} % Leave empty to omit a date
-\renewcommand{\maketitlehookd}{%
-\begin{abstract}
-\noindent TODO ARTE write abstract % abstract text
-\end{abstract}
-}
+
 
 %----------------------------------------------------------------------------------------
 
@@ -117,6 +72,10 @@
 % Print the title
 \maketitle
 
+\thispagestyle{firstpage}
+
+
+\lettrineabstract{Lorem ipsum dolor sit amet, TODO ARTE writes the abstract consectetur adipiscing elit. Fusce maximus nisi ligula. Morbi laoreet ex ligula, vitae lobortis purus mattis vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ac metus ut turpis mollis placerat et nec enim. Duis tristique nibh maximus faucibus facilisis. Praesent in consequat leo. Maecenas condimentum ex rhoncus, elementum diam vel, malesuada ante.} %TODO ARTE
 %----------------------------------------------------------------------------------------
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
@@ -126,14 +85,15 @@
 % Really nice looking first letter
 %\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
 
-TODO FAHI write the intro
+TODO FAHI write the intro %TODO FAHI
 
 \section{Method}
 
-TODO PAST write the method
+TODO PAST write the method %TODO PAST
 
 \section{Survey}
 
+%TODO FAHI, FFO, JOB wrtie their summary
 \subsection{Agile Model Driven Development}
 
 Modeling is an important part of all software development projects because it enables to think through complex issues before the attempt to address them via code. This is true for agile projects, for not-so-agile projects, for embedded projects, and for business application projects. Unfortunately, many modeling efforts prove to be dysfunctional. At one end of the spectrum there are projects where no modeling is performed, either because the developers haven’t any modeling skills or because they have abandoned modeling as a useless endeavor. At the other end of the spectrum there are projects which sink in a morass of documentation and overly detailed models, either because the project team suffers from “analysis paralysis” and finds itself unable to move forward or because the team has burdened itself with too many modeling specialists who don’t have the skills to move forward even if they wanted to. Somewhere in the middle, there are project teams that invest in modeling and documentation efforts only to discover that the programmers ignore the models anyway, often because the models are unrealistic or simply because the programmers think they know better than the modelers (and often they do). The goal of Agile Model Driven Development (AMDD) is to show how to avoid these problems, to gain the benefits of modeling and documentation without suffering the drawbacks \cite{1}.
@@ -183,11 +143,43 @@ Finally this framework is instantiated within the Open Model Initiative Laborato
 As a conclusion, the author states the importance of accepting the AMME approach, because the Software Development field needs it as much as it did the Agile Manifiesto back in the day. Modeling
 requirements should be the essential driver for modeling method engineering, and an approach based on AMME will enable agile response to evolving requirements, as well as traceability of change propagation across modeling method building blocks.
 
+\subsection{Comparing and Contrasting Model-Driven Engineering at Three Large Companies}
+
+Burden et.\,al. \cite{10} empirically investigate three companies, namely \emph{Ericson AB}, \emph{Volvo Cars} and \emph{Volvo Group}, which undergo a parallel shift to MDE and Agile Methods concerning their development methodologies.
+They contribute to the broad empirical study by Hutchinson et. al. \cite{secondaryHutchinsonEmpirical} about the use of MDE in industry.
+In general their observations validate the findings of Hutchinson et. al., e.\,g. MDE works best in narrow well-understood domains, it has to be driven bottom-up through developers and must be put on the critical path.
+Though, they also refute some of the previous findings: 
+Engineers are actually well-trained in MDE methodology by universities, code gurus appreciate code generators to reduce repetitive tasks, middle managers welcome MDE as it help minimizing risks and architects might find the complexity of MDE tools intimidating.
+As a result Agile and MDE can yield synergies:
+Agile profits from MDE by the enforced integration of stakeholders by abstracting away from the actual implementation and by reducing external dependencies because outsourced activities are brought back in-house through automation.
+The success from MDE can profit from the bottom-up approach of Agile Methods.
+A further interesting finding of \cite{10} is the importance of secondary tools. 
+As MDE tools again can cause repetitive tasks, engineers naturally develop secondary tools, e.\,g. scripts to again automate this activities.
+
+\subsection{Early Experience with Agile Methodology in a Model-driven Approach}
+
+In \cite{11} Kulkarni et.\,al. report about their experiences on the introduction of Agile Methods in a MDE based software development process within \emph{Tata Consultancy Services}.
+This company is specialized on the delivery of E-commerce solutions for a wide range of customers from different areas.
+As their customers require individual solutions but with common requirements between customers, MDE turned out to be very effective as a majority of an application can be generated and only minor adjustments are required.
+The development of their MDE platform used to be based on a traditional plan-driven approach. 
+When they changed to an agile approach, they first suffered a loss of productivity and estimations were always wrong. 
+After a few weeks, the process stabilized and they actually experienced an significant improvement of productivity and accuracy of estimates.
+However, they experienced that a pure agile approach is not adequate for MDE, as sometimes in-depth analysis, exploration and research might be required in the development of the MDE tools.
+As Agile promotes the delivery of executable artifacts and short timely intervals, these kinds of activities are barely feasible.
+Therefore they adapted their approach by introducing Meta-Sprints, i.\,e. a longer sprint which is allowed to produced non-executable artifacts such as documentation, proof-of-concept prototypes etc.
+Kulkarni et. al. really positive experiences with these adapted agile approach.
+
+\subsection{Using Free Modeling as an Agile Method for Developing Domain Specific Modeling Languages}
+
+Golra et.\,al. \cite{12} report on their experience about using Agile Methods for the development of Domain Specific Languages in a project for a governmental organization in France.
+In spite of defining the language top down with strict semantics, they developed metamodel, model and graphical representations in parallel with loose coupling in between the artifacts.
+They identified several positive finding on the effects of Agile within MDE.
+Agile Methods within the development of graphical DSLs is a success story as it facilitates communication with domain experts and development requires flexibility both in tools and communication.
+However, the authors point out that further conceptual studies in this area are required.
+ 
 \section{Conclusion}
 
-TODO ARTE write a conclusion
-
-
+TODO ARTE write a conclusion %TODO ARTE
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
