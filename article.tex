@@ -76,22 +76,50 @@
 
 
 
-\lettrineabstract{Model Driven Engineering together with its synonymous is an approach to Software Engineering, which promotes the usage of abstract model as primary assets during the development process. Concrete software artifacts can be generated from models with few to none human interaction. It has its origin academia and has been adopted from industrial consortiums.
-Agile is another approach, which has arisen in the practice of Software Engineering. It describes a set of values and principles for software development under which requirements and solutions iteratively evolve through the collaborative effort of self-organizing cross-functional teams. The idea is to put the individual and its interactions over fixed plans and schedules.
-Both approaches have been considered to be contradicting. Indeed this paper reveals that there is not much material available, which consider a combination of both. Though there exists evidence that both approaches can be combined. This requires an adaption of the approaches with respect to the other but also yield promising positive results.
+\lettrineabstract{Model Driven Engineering is an approach to Software Engineering, which promotes the usage of abstract model as primary assets during the development process. Concrete software artifacts can be generated from models with few to none human interaction. It has its origin in academia and has been adopted from industrial consortiums.
+Agile is a different approach, which arose in the practice of Software Engineering. 
+It describes a set of values and principles for software development under which requirements and solutions iteratively evolve through the collaborative effort of self-organizing cross-functional teams. 
+Both approaches have been considered to be contradicting. 
+Indeed this paper reveals that there are only few resources available reporting about a combination of both. 
+Though, this paper reveals evidence that both approaches can be combined. 
+On the one hand this imposes further challenges as it requires an adaption of the approaches with respect to the other but on the other hand also yields promising positive results.
 }
 %----------------------------------------------------------------------------------------
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
+\label{sec:intro}
 
-% Really nice looking first letter
-%\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
+Software Engineering is "the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software" \cite{IEEEglossary}.
+Over the past decades there have been several of those approaches on how to best develop and evolve software systems. 
+In this paper we want to look at the interaction of two prevalent software engineering approaches, namely \emph{Model Driven Engineering (MDE)} and \emph{Agile Software Development}.
 
-TODO FAHI write the intro %TODO FAHI
+MDE \cite{BrambillaCabotW2017, RODRIGUESDASILVA2015139} has been around for several years. 
+The first tools supporting MDE appeared under the name Computer-Aided Software Engineering (CASE) in the 1980s.
+A significant event within the history of MDE is denoted by the publication of the Unified Modeling Language (UML) \cite{OMG2015UML} through the Object Management Group (OMG) industrial consortium.
+UML represents a standard for the creation of conceptual models describing the structure and behavior of complex system, which can serve as input artifacts for code generation, simulation and reasoning.
+MDE has found a broad adoption in academia there is a plethora of material available about formal semantics, transformation and application of modeling.
+In the industry MDE has found some application but is till far away to be the standard \cite{secondaryHutchinsonEmpirical, whittle2014state}.
+
+Agile software development is an approach, which was coined by several practitioners in software engineering.
+It was popularized by the \emph{Manifesto for agile software development} \cite{secondaryAgileManifesto}, which defines the values and principles of these approaches. 
+There evolved different formally defined methodologies, e.\,g. Scrum, Kanban and eXtreme Programming (XP).
+The core idea of this approaches is the emphasize on the flexibility of small individually acting teams, which incrementally produce executable software in short time intervals, so called iterations.
+Such an approach is better suited to changing customer requirements then traditional plan-based approaches.
+
+Some supporters of the Agile approach claim that MDE is as a lost cause \cite{2}. 
+Therefore, we want to investigate the interaction of both approaches. 
+Do they represent contradicting approaches or can they be combined and does this combination then yield a positive impact?
+In this paper we conduct a literature review to discover published evidence of software engineering approaches combining both approaches and the respective experiences. 
+
+The structure of this paper is as follows.
+In section~\ref{sec:method} we introduce our precise research questions and the method used to conduct the literature review.
+Section~\ref{sec:survey} provides an overview of the discovered results from the review.
+Finally section~\ref{sec:conclusion} draws a conclusion of the literature review and gives answers to the research questions from section~\ref{sec:method}.
 
 \section{Method}
+\label{sec:method}
 
 The methodology used for creating this literature review is loosely based on the \emph{systematic literature review}, as described by Kitchenham et.\,al. in \cite{secondaryKitchenhamSLR}.
 To conduct the review, the following research questions were asked:
@@ -101,7 +129,7 @@ To conduct the review, the following research questions were asked:
 \item[RQ 3:] In what domains and for what purpose is modeling agile processed applied?
 \end{description}
 
-Answers to these questions will help us to understand, if both approaches to Software Engineering are used in combination in practice, if their combination yields positive effects and in what areas it is actually applied. 
+Answers to these questions will help us to understand, if both approaches to Software Engineering are used in combination in practice, if their combination yields positive effects and in which areas it is actually applied. 
 To get profound results we are looking for peer-reviewed scientific publications published in journals or conferences. 
 We decided incorporate the following databases for our search:
 \begin{itemize}
@@ -118,7 +146,7 @@ Each one of the databases was queried with the search string:
 
 The search yielded around thirty results in the ACM and IEEE library and more than 3000 results in the two other databases. 
 We decided to restrict the time interval to papers after 2001 as the \emph{Agile Manifesto} \cite{secondaryAgileManifesto} was published in this year, which can be considered to be the beginning of the Agile movement.
-To narrow the search further down, we defined the following inclusion criteria:
+To narrow the search further down, we defined the following inclusion criteria, which a search result has to fulfill to be considered in our survey:
 \begin{description}
 \item[Inclusion] conference or journal article, contains practical relevance, papers after 2001
 \end{description}
@@ -126,33 +154,33 @@ To narrow the search further down, we defined the following inclusion criteria:
 We applied this criteria by looking at title and abstract of the discovered results. 
 It turned out that most of the found papers did not contain Agile and MDE methodology at the same time.
 Furthermore a lot of papers did not refer to any practical experiences.
-After rigorously applying the filter criteria we ended with 13 papers. 
-For the analysis we did not apply a fixed review protocol due to the size of the found material.
-A survey about discovered result is presented in the next section.
+After rigorously applying the filter criteria, we ended with 12 papers. 
+For the analysis we did not apply a fixed review protocol due to the small number of findings and performed a free summary instead.
+A survey about the discovered result is presented in the next section.
 
 \section{Survey}
+\label{sec:survey}
 
-%TODO FAHI, FFO, JOB wrtie their summary
 \subsection{Agile Model Driven Development}
 
-Modeling is an important part of all software development projects because it enables to think through complex issues before the attempt to address them via code. This is true for agile projects, for not-so-agile projects, for embedded projects, and for business application projects. Unfortunately, many modeling efforts prove to be dysfunctional. At one end of the spectrum there are projects where no modeling is performed, either because the developers haven’t any modeling skills or because they have abandoned modeling as a useless endeavor. At the other end of the spectrum there are projects which sink in a morass of documentation and overly detailed models, either because the project team suffers from “analysis paralysis” and finds itself unable to move forward or because the team has burdened itself with too many modeling specialists who don’t have the skills to move forward even if they wanted to. Somewhere in the middle, there are project teams that invest in modeling and documentation efforts only to discover that the programmers ignore the models anyway, often because the models are unrealistic or simply because the programmers think they know better than the modelers (and often they do). The goal of Agile Model Driven Development (AMDD) is to show how to avoid these problems, to gain the benefits of modeling and documentation without suffering the drawbacks \cite{1}.
+For Scott W. Ambler \cite{1} modeling is an important part of all software development projects because it enables to think through complex issues before the attempt to address them via code. This is true for agile projects, for not-so-agile projects, for embedded projects, and for business application projects. Unfortunately, many modeling efforts prove to be dysfunctional. At one end of the spectrum there are projects where no modeling is performed, either because the developers haven’t any modeling skills or because they have abandoned modeling as a useless endeavor. At the other end of the spectrum there are projects which sink in a morass of documentation and overly detailed models, either because the project team suffers from “analysis paralysis” and finds itself unable to move forward or because the team has burdened itself with too many modeling specialists who don’t have the skills to move forward even if they wanted to. Somewhere in the middle, there are project teams that invest in modeling and documentation efforts only to discover that the programmers ignore the models anyway, often because the models are unrealistic or simply because the programmers think they know better than the modelers (and often they do). The goal of Agile Model Driven Development (AMDD) is to show how to avoid these problems, to gain the benefits of modeling and documentation without suffering the drawbacks.
 
-AMDD as the agile version of MDD (Model Driven Development) takes a much more realistic approach: its goal is to describe how developers and stakeholders can work together cooperatively to create models which are just barely good enough. It assumes that each individual has some modeling skills, or at least some domain knowledge, that they will apply together in a team in order to get the job done. It is reasonable to assume that developers will understand a handful of the modeling techniques out there, but not all of them. It is also reasonable to assume that people are willing to learn new techniques over time, often by working with someone else that already has those skills.
+AMDD as the agile version of MDD (Model Driven Development) takes a much more realistic approach in his opinion: its goal is to describe how developers and stakeholders can work together cooperatively to create models which are just barely good enough. It assumes that each individual has some modeling skills, or at least some domain knowledge, that they will apply together in a team in order to get the job done. It is reasonable to assume that developers will understand a handful of the modeling techniques out there, but not all of them. It is also reasonable to assume that people are willing to learn new techniques over time, often by working with someone else that already has those skills.
 
 AMDD does not require everyone to be a modeling expert, it just requires them to be willing to try. AMDD also allows people to use the most appropriate modeling tool for the job, often very simple tools such as whiteboards or paper, because one wants to find ways to communicate effectively, not document comprehensively. There is nothing wrong with sophisticated CASE tools in the hands of people who know how to use them, but AMDD does not depend on such tools.
 
 \subsection{Agile Model Driven Development Is Good Enough}
 
-S. W. Ambler \cite{2} believes that modeling is a way to think issues through before the code step because it lets to think at a higher abstraction level. One can also do this by writing a test before writing functional code, along the lines of test-driven development.
-With the Agile Model Driven Development (AMDD) approach, one typically do just enough high-level modeling at the beginning of a project to understand the scope and potential architecture of the system, and then during development iterations modelling will be done as part of the iteration planning activities to. In this way light models will be done in several minutes as precursor to several hours of coding.
+Scott W. Ambler \cite{2} believes that modeling is a way to think issues through before the code step because it lets to think at a higher abstraction level. One can also do this by writing a test before writing functional code, along the lines of test-driven development.
+With the Agile Model Driven Development (AMDD) approach, one typically just does enough high-level modeling at the beginning of a project to understand the scope and potential architecture of the system, and then during development, iteration modeling will be done as part of the iteration planning activities to. Lightweight models will be created in several minutes as precursor to several hours of coding.
 
 An agile model is just barely good enough—it meets its goals and no more. Several times experts tend to use complex models, even when the situation can be described in a softer and simpler way. The vast majority of models can be drawn on a whiteboard, on paper or even the back of a napkin. Whenever one of these diagrams want to be saved it can be taken a picture of it with a digital camera, or even simply transcribe it onto paper. This works because most diagrams are throwaways; their true value comes from drawing them to think through an issue, and once the issue is resolved the diagram doesn't offer much value.
 
-In the end of \cite{2} there is a discussion between Axel Uhl and Scott W Ambler, Axel remarks some projects where MDA succeeded nevertheless Scott answers saying that he is not very excited about MDA due to big failures of some projects in the past.
+In the end of \cite{2} there is a discussion between Axel Uhl and Scott W. Ambler, Axel remarks some projects where MDA succeeded nevertheless Scott answers saying that he is not very excited about MDA due to big failures of some projects in the past.
 
 \subsection{Agile Model Driven Development: An Intelligent Compromise}
 
-This article \cite{3} presents the concept of Agile Model Driven Development or AMDD as an attempt to effectively bring together the fast pace of agile development and the guaranteed quality of model-driven development. This methodology makes use of the strong contrast between Agility and Model Driven Software Engineering or MDSE, attempting to cover each of their flaws with the strong points of the other, creating a symbiotic association. For instance, MDSE strict focus on documentation and models generation can supply perfectly the documentation “phobia” that suffers agile development.
+Matinnejad \cite{3} presents the concept of AMDD as an attempt to effectively bring together the fast pace of agile development and the guaranteed quality of model-driven development. This methodology makes use of the strong contrast between Agility and Model Driven Software Engineering or MDSE, attempting to cover each of their flaws with the strong points of the other, creating a symbiotic association. For instance, MDSE strict focus on documentation and models generation can supply perfectly the documentation “phobia” that suffers agile development.
 
 The author reviews four different types of AMDD processes used in academia and industry:
 \begin{itemize}
@@ -164,11 +192,11 @@ The author reviews four different types of AMDD processes used in academia and i
 
 After reviewing and analyzing each of them according to AMDD, MDD and Agility evaluation criteria; the author concludes that AMDD adopts different processes with no convergence between them, which can be a consequence of the lack of academic research in the area.
 
-The final statement is that although AMDD is a promising field in a research and practical context, the author considers it not mature at all, stressing that it is still in its “infancy”. This paper can be used as an starting point in a AMDD research for creating, adapting or selecting AMDD processes.
+The final statement is that although AMDD is a promising field in a research and practical context, the author considers it not to be mature at all, stressing that it is still in its “infancy”. This paper can be used as an starting point in a AMDD research for creating, adapting or selecting AMDD processes.
 
 \subsection{Agile Modeling Method Engineering}
 
-This paper \cite{4} provides an overview on the practice of Agile Modeling Method Engineering or AMME. This practice mixes the use of modeling and agile methodologies, as a way to evolve modeling requirements all along the software life cycle and to connect more stakeholders and developers.
+Karagiannis \cite{4} provides an overview on the practice of Agile Modeling Method Engineering (AMME). This practice mixes the use of modeling and agile methodologies, as a way to evolve modeling requirements all along the software life cycle and to connect more stakeholders and developers.
 
 In other words, its goal is to outline the key characteristics of AMME as an emerging paradigm for tackling evolving modeling requirements emerging from a narrow domain and for specific
 needs of modeling stakeholders.
@@ -186,58 +214,57 @@ requirements should be the essential driver for modeling method engineering, and
 
 Burden et.\,al. \cite{10} empirically investigate three companies, namely \emph{Ericson AB}, \emph{Volvo Cars} and \emph{Volvo Group}, which undergo a parallel shift to MDE and Agile Methods concerning their development methodologies.
 They contribute to the broad empirical study by Hutchinson et. al. \cite{secondaryHutchinsonEmpirical} about the use of MDE in industry.
-In general their observations validate the findings of Hutchinson et. al., e.\,g. MDE works best in narrow well-understood domains, it has to be driven bottom-up through developers and must be put on the critical path.
+In general their observations validate the findings in \cite{secondaryHutchinsonEmpirical}., e.\,g. that MDE works best in narrow well-understood domains, it has to be driven bottom-up through developers and must be put on the critical path.
 Though, they also refute some of the previous findings: 
 Engineers are actually well-trained in MDE methodology by universities, code gurus appreciate code generators to reduce repetitive tasks, middle managers welcome MDE as it help minimizing risks and architects might find the complexity of MDE tools intimidating.
 As a result Agile and MDE can yield synergies:
-Agile profits from MDE by the enforced integration of stakeholders by abstracting away from the actual implementation and by reducing external dependencies because outsourced activities are brought back in-house through automation.
-The success from MDE can profit from the bottom-up approach of Agile Methods.
+Agile profits from MDE by the enforced integration of stakeholders by abstracting away from the actual implementation. Furthermore it can reduce external dependencies because outsourced activities are brought back in-house through automation.
+Finally the success from MDE can profit from the bottom-up approach of Agile Methods.
 A further interesting finding of \cite{10} is the importance of secondary tools. 
-As MDE tools again can cause repetitive tasks, engineers naturally develop secondary tools, e.\,g. scripts to again automate this activities.
+As MDE tools can cause repetitive tasks, engineers naturally develop secondary tools, e.\,g. scripts to again automate this activities.
 
 \subsection{Early Experience with Agile Methodology in a Model-driven Approach}
 
 In \cite{11} Kulkarni et.\,al. report about their experiences on the introduction of Agile Methods in a MDE based software development process within \emph{Tata Consultancy Services}.
 This company is specialized on the delivery of E-commerce solutions for a wide range of customers from different areas.
-As their customers require individual solutions but with common requirements between customers, MDE turned out to be very effective as a majority of an application can be generated and only minor adjustments are required.
+As their customers require individual solutions but there is a big overlap between the requirements of the customers, MDE turned out to be very effective for them as a majority of an application can be generated and only minor adjustments are required.
 The development of their MDE platform used to be based on a traditional plan-driven approach. 
-When they changed to an agile approach, they first suffered a loss of productivity and estimations were always wrong. 
+When they changed to an agile approach, they first suffered a loss of productivity and estimations of cost and time were always wrong. 
 After a few weeks, the process stabilized and they actually experienced an significant improvement of productivity and accuracy of estimates.
 However, they experienced that a pure agile approach is not adequate for MDE, as sometimes in-depth analysis, exploration and research might be required in the development of the MDE tools.
 As Agile promotes the delivery of executable artifacts and short timely intervals, these kinds of activities are barely feasible.
-Therefore they adapted their approach by introducing Meta-Sprints, i.\,e. a longer sprint which is allowed to produced non-executable artifacts such as documentation, proof-of-concept prototypes etc.
-Kulkarni et. al. really positive experiences with these adapted agile approach.
+Therefore they adapted their approach by introducing Meta-Sprints, i.\,e. a longer sprint which is allowed to produce non-executable artifacts such as documentation, proof-of-concept prototypes etc.
+Kulkarni et. al. report really positive experiences with this adapted agile approach.
 
 \subsection{Using Free Modeling as an Agile Method for Developing Domain Specific Modeling Languages}
 
-Golra et.\,al. \cite{12} report on their experience about using Agile Methods for the development of Domain Specific Languages in a project for a governmental organization in France.
-In spite of defining the language top down with strict semantics, they developed metamodel, model and graphical representations in parallel with loose coupling in between the artifacts.
+Golra et.\,al. \cite{12} report on their experience about using Agile Methods for the development of a graphical Domain Specific Language (DSL) in a project for a governmental organization in France.
+In spite of defining the language top down with strict semantics, they developed the metamodel, the model and the graphical representations in parallel with loose coupling in between the artifacts.
 They identified several positive finding on the effects of Agile within MDE.
-Agile Methods within the development of graphical DSLs is a success story as it facilitates communication with domain experts and development requires flexibility both in tools and communication.
+In short Agile Methods within the development of graphical DSLs are a success story as they facilitate communication with domain experts and development teams.
+Given flexibility both in tools and communication more accurate results can be achieved.
 However, the authors point out that further conceptual studies in this area are required.
 
 \subsection{Towards improving agility in model driven development}
 
-This paper is the initial paper in a proposed series of publications that sets the stage for the research to be conducted by the authors. The authors have identified gaps in the corpus of knowledge of the field of agile model driven development. They have identified gaps in 1) the understanding of the state of practice of agile model driven development 2) the benefits that agile MDD is supposed to provide and 3) identifying the challenges that beset the adoption of agile MDD \cite{alfraihi2016towards}.
+In \cite{alfraihi2016towards} Alfahiri proposed series of publications that sets the stage for the research to be conducted by the authors. The author has identified gaps in the corpus of knowledge of the field of agile model driven development. He has identified gaps in 1) the understanding of the state of practice of agile model driven development 2) the benefits that agile MDD is supposed to provide and 3) identifying the challenges that beset the adoption of agile MDD.
 
-The authors begin by describing Model Driven Development as a new paradigm where models are the main artefact in software development and from which code is generated. They describe agile development as an approach that imposes a disciplined project management structure upon software development. To the authors, both MDD and Agile methods share a core aim of accelerating the development process yet their approaches to achieve this aim are different.
+The author begins by describing Model Driven Development as a new paradigm where models are the main artefact in software development and from which code is generated. He describes agile development as an approach that imposes a disciplined project management structure upon software development. To the author, both MDD and Agile methods share a core aim of accelerating the development process yet their approaches to achieve this aim are different.
 
 In this paper, a contrast between agile and MDD was made. The first contrast was in the difference in abstraction levels of the main artefacts in either approach. It was observed that while MDD emphasises the importance of high-level models, agile was heavily code-centric. Another contrast was in the fact that Agile methods were mainly focused on the methodological (organizational) aspects of software development while MDD is focused on the architectural aspects. Finally, agile methods are people oriented with each iteration incorporating customer feedback and an emphasis on teamwork while MDD approaches are focused on the tools and technologies to develop a system.
 
 For all their contrasts, these two approaches do share some similarities. To begin with, both of them aim to reduce the gap between requirements analysis and implementation and hence the errors that arise from incorrect formulation. In agile this is achieved by using short incremental iteration for development with direct customer collaboration while MDD does so by automating the development process. In addition, the automation in code generation in MDD implies faster development which is the promise of agility. Moreover, the degree of abstraction in design, in MDD, consorts with what Agile tries to achieve: eliminate the gap between customer and developers, and provide rapid feedback to validate the system.
 
-To the authors, agile model driven development is an attempt to get the best of both paradigms while mitigating their drawbacks. To achieve this, significant research needs to be conducted to address the gaps identified. There is also a brief section on related work where a review of the current research in agile model driven development is presented. This literature review shows that most of the current work in the field is aimed at classifying how agile and MDD approaches are combined. The authors point out that none of the published literature in the field addresses the questions of benefits and challenges of agile MDD \cite{matinnejad2011agile,stavru2013challenges,whittle2014state}.
+To the author, agile model driven development is an attempt to get the best of both paradigms while mitigating their drawbacks. To achieve this, significant research needs to be conducted to address the gaps identified. There is also a brief section on related work where a review of the current research in agile model driven development is presented. This literature review shows that most of the current work in the field is aimed at classifying how agile and MDD approaches are combined. The author points out that none of the published literature in the field addresses the questions of benefits and challenges of agile MDD \cite{matinnejad2011agile,stavru2013challenges,whittle2014state}.
 
 Finally, the paper outlines the proposed next steps for the research and how the authors plan to address their research question. This includes conducting a systematic literature review, carrying out an interview-based survey, developing an agile MDD framework and conducting a case study to evaluate the usability and effectiveness of the proposed framework.
 
 \subsection{Agile model driven development in practice}
 
-In this paper, a case study is presented where agile model driven development approaches are applied to the development of a real time telecommunications system at Motorola \cite{zhang2011agile}. In this case study, the investigators combined system-level agile process (SLAP) and an MDD process into one to speed up development rate, improve product quality and shorten delivery cycle time. SLAP is an agile process adopted at Motorola that uses scrum as a baseline and includes certain extreme programming practices. SLAP divides a software development life cycle into multiple iterations. Each iteration consists of three sprints: application requirements and architecture, development, and system integration feature testing (SIFT). Each sprint is five weeks long and has the same set of activities (called its calendar). 
+Matinnejad \cite{matinnejad2011agile} presented a case study where agile model driven development approaches are applied to the development of a real time telecommunications system at Motorola \cite{zhang2011agile}. In this case study, the investigators combined system-level agile process (SLAP) and an MDD process into one to speed up development rate, improve product quality and shorten delivery cycle time. SLAP is an agile process adopted at Motorola that uses scrum as a baseline and includes certain extreme programming practices. SLAP divides a software development life cycle into multiple iterations. Each iteration consists of three sprints: application requirements and architecture, development, and system integration feature testing (SIFT). Each sprint is five weeks long and has the same set of activities (called its calendar). 
 
 
 The MDD process used at Motorola is based on the unified software development process process. It divides a software development life cycle into multiple milestone phases over time (such as inception or elaboration), and each milestone phase consists of one or more iterations. Each iteration contains the same set of core development activities (such as requirements analysis or high-level design) and follows a tailored V-Model process.
-
-SLAP divides a software development life cycle into multiple iterations. Each iteration consists of three sprints: application requirements and architecture, development, and system integration feature testing (SIFT). Each sprint is five weeks long and has the same set of activities (called its calendar).
 
 The plan was to combine the agile process (SLAP) with the MDD process in a manner that inherits the benefits of both while avoiding their shortcomings. The strategy was to take SLAP as the backbone process and map MDD iterations and activities to the corresponding SLAP sprints and activities. In this way, like SLAP, an iteration in agile MDD still consists of three sprints.The sprint for requirements specification and architecture is the same as the one in SLAP. The development sprint includes requirements analysis, high-level design, detailed design, code generation, UML unit testing, and integration testing. 
 
@@ -251,14 +278,14 @@ The authors concluded that from the MDD perspective, the key to success in agile
 
 Turk et. al. \cite{TurkFR14} identify limitations that apply to many of the published agile processes in terms of the types of projects in which their application may be problematic. They describe some of the situations in which agile processes may generally not be applicable and one of them is directly reflecting to the application of MDE in the agile software process. The limitations of agile processes are summarized as follows:
 
-\begin{description}
-\item[Limited support for distributed development environments:] software. Documentation and models should be created and maintained only if they provide value to the project and project stakeholders. Otherwise, face-to-face communication is as important in distributed environments as the non-distributed environment.
-\item[Limited support for subcontracting:] The process may be an iterative, incremental approach, but the subcontractor may have to make the process predictive by specifying the number of iterations and the deliverables of each iteration in order to compete.
-\item[Limited support for building reusable artifacts:] While there seems to be a case for applying agile processes to the development of reusable artifacts, it is not clear how agile processes can be suitably adapted.
-\item[Limited support for development involving large teams:] There may be opportunities for teams to use agile practices, but the degree of agility possible may be less than that found in smaller projects.
-\item[Limited support for developing safety-critical software:] it can be assumed that agile and formal software development are not incompatible but can be combined when needed: Formal techniques may be used in an agile way to handle critical pieces of the software to increase quality and confidence.
-\item[Limited support for developing large, complex software:] The assumption that code refactoring removes the need to design for change may not hold for large complex systems in particular. The complexity and size of such software may make strict code refactoring costly and error-prone. Models can play an important role here, especially if tools exist for generating significant portions of the code from the models. This view of models as the central artifacts for evolving systems is at the heart of the Object Management Group’s (OMG) Model-Driven Architecture (MDA) approach.
-\end{description}
+\begin{itemize}
+\item \emph{Limited support for distributed development environments:} software. Documentation and models should be created and maintained only if they provide value to the project and project stakeholders. Otherwise, face-to-face communication is as important in distributed environments as the non-distributed environment.
+\item \emph{Limited support for subcontracting:} The process may be an iterative, incremental approach, but the subcontractor may have to make the process predictive by specifying the number of iterations and the deliverables of each iteration in order to compete.
+\item \emph{Limited support for building reusable artifacts:} While there seems to be a case for applying agile processes to the development of reusable artifacts, it is not clear how agile processes can be suitably adapted.
+\item \emph{Limited support for development involving large teams:} There may be opportunities for teams to use agile practices, but the degree of agility possible may be less than that found in smaller projects.
+\item \emph{Limited support for developing safety-critical software:} it can be assumed that agile and formal software development are not incompatible but can be combined when needed: Formal techniques may be used in an agile way to handle critical pieces of the software to increase quality and confidence.
+\item \emph{Limited support for developing large, complex software:} The assumption that code refactoring removes the need to design for change may not hold for large complex systems in particular. The complexity and size of such software may make strict code refactoring costly and error-prone. Models can play an important role here, especially if tools exist for generating significant portions of the code from the models. This view of models as the central artifacts for evolving systems is at the heart of the Object Management Group’s (OMG) Model-Driven Architecture (MDA) approach.
+\end{itemize}
 
 \subsection{Agile Model-Driven Engineering in Mechatronic Systems - An Industrial Case Study}
 
@@ -272,19 +299,20 @@ The authors of the paper conducts two case studies at Volvo Car Group (VCG) in S
 \item What impact does faulty assumptions within the test environment have on the product and the process? 
 \end{enumerate}
 
-Two case studies where conducted on the engineering teams responsible for the clutch control for the electrical drivetrain in a hybrid vehicle and for the active high beam highlight. Both case studies implemented MDE and agile methods in the workflow. The studies indicate that the development cycle where shortened by implementing the new methods in the engineering teams, but that one of the biggest problem to address is the faulty plant models delivered from the third party vendors. The paper concludes with that MDE and agile methods can successfully be combined to speed up the development phase of a software system in a car. With faster feedback methods from the agility framework, the developers were able to address holes in their knowledge and decrease the number of errors in their preliminary software. The paper also suggested more future work with MDE methods, and more automated code generation.
+Two case studies where conducted on the engineering teams responsible for the clutch control for the electrical drivetrain in a hybrid vehicle and for the active high beam highlight. Both case studies implemented MDE and agile methods in the workflow. The studies indicate that the development cycle where shortened by implementing the new methods in the engineering teams, but that one of the biggest problem to address is the faulty plant models delivered from the third party vendors. The paper concludes with the statement that MDE and agile methods can successfully be combined to speed up the development phase of a software system in a car. With faster feedback methods from the agility framework, the developers were able to address holes in their knowledge and decrease the number of errors in their preliminary software. The paper also suggested more future work with MDE methods, and more automated code generation.
 
 \subsection{Mockup-Driven Development: Providing agile support for Model-Driven Web Engineering}
 
-Rivero et. al. \cite{RIVERO2014670} introduces a bottom-up driven approach on implementing model-driven web engineering. Instead of using the traditional top-down approach in model-driven engineering, where application content is modeled initially, the authors suggest to invert the development process and start with the user interface-mockups. From the mockups, code generation and model-driven engineering methods are used to build the actual functional software. By inverting the normal top-down approach normally found in MDE, the authors argue that the result is an agile prototype-based iterative process, with the advantages of automatic code-generation and documentation from MDE. 
+Rivero et. al. \cite{RIVERO2014670} introduce a bottom-up driven approach on implementing model-driven web engineering. Instead of using the traditional top-down approach in model-driven engineering, where application content is modeled initially, the authors suggest to invert the development process and start with the user interface-mockups. From the mockups, code generation and model-driven engineering methods are used to build the actual functional software. By inverting the normal top-down approach normally found in MDE, the authors argue that the result is an agile prototype-based iterative process, with the advantages of automatic code-generation and documentation from MDE. 
 
-The paper concludes that their method reduces the errors and effort in model building, while at the same time allows introducing agile features to the modeling process. By generating code based on mockups, the authors method shows a fast and agile way of developing user friendly web application, where non domain-experts can create functional web design straight from they’re conceptualized mockups. For future work the authors will keep testing and validating the developed tool by using it to build applications. They are also extending the tool to provide code generation capabilities for common Web technologies and architectures.
+The paper concludes that their method reduces the errors and the effort in model construction, while at the same time allows introducing agile features to the modeling process. By generating code based on mockups, the authors method shows a fast and agile way of developing user friendly web application, where non domain-experts can create functional web design straight from their conceptualized mockups. For future work the authors will keep testing and validating the developed tool by using it to build applications. They are also extending the tool to provide code generation capabilities for common Web technologies and architectures.
 
 
 \section{Conclusion}
-
+\label{sec:conclusion}
 This section summarizes the results of the survey and present the conclusion extracted.
-Despite the survey covered the study of just 13 papers, good results and relevant information were found.
+Despite the survey covered the study of just 12 papers, good results and relevant information were found.
+Still, a publication bias about the lack of possible publications about unsuccessful combinations of MDE and Agile has to be considered.
 
 We proceed by answering the three research questions proposed in Section 2.
 
@@ -303,10 +331,10 @@ Nevertheless, projects that were able to overcome this initial gap, and solved t
 	\item[RQ 2:] Does MDSE improve the efficiency within an agile development environment?
 \end{description}
 
-Accordingly to the reports we found during the research, projects that eventually incorporated or followed AMDD improved the results in some way.
-The study case of Volvo Car Group revealed that MDE and agile methods can successfully be combined to speed up the development phase of a software system in a car\cite{Eliasson2014}.
+Accordingly to the reports we found during the research, projects that eventually incorporated or followed, AMDD improved the results in some way.
+The study case of Volvo Cars revealed that MDE and agile methods can successfully be combined to speed up the development phase of a software system in a car\cite{Eliasson2014}.
 Rivero et. al. \cite{RIVERO2014670} showed that by generating code based on mockups, the authors method shows a fast and agile way of developing user friendly web application, where non domain experts can create functional web design straight from their conceptualized mockups.
-The results in the case of Motorola \cite{zhang2011agile} declared that 93\% of the entire component code was automatically generated and the quality of the automatically generated code in terms of defects density was significantly higher than manual code.
+The results in the case of Motorola \cite{zhang2011agile} declared that 93\% of the entire component code was automatically generated and the quality of this generated code in terms of defects density was significantly higher than manual code.
 
 \begin{description}
 	\item[RQ 3:] In what domains and for what purposes is agile modeling applied?
